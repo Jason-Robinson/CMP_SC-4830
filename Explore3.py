@@ -8,3 +8,12 @@ meal = meal + meal * tax
 
 total = meal + meal * tip
 print("%.2f" % total)
+
+def counter(n):
+#can declare more than one variable of same type
+     a, b = 1, 2
+     while a < n:
+         print(a, end=' ')
+         a, b = b, a+b
+     print()
+counter(500)
