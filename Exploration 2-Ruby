@@ -1,0 +1,19 @@
+//hash tables are incredibly easy to make, and access data thats sorted in them.
+//key/value pairs as seen below
+
+table["Stratocaster"] = :fender
+
+//String formatting and manipulation is fantastic
+//since most websites are text heavy, this function comes in handy
+//String Methods
+
+	.lines, .downcase, .join
+	
+//It makes manipulating small bits of text easy, not a hassle like many other languages
+
+//File access is pretty easy, such as I/O of text files.
+//It is similar to C++ except not as much syntax, more fluid
+
+File.open("/Directory/file.txt", "a")
+f << "text" 
+end
