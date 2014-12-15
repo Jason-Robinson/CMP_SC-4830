@@ -22,7 +22,8 @@ public class Sound extends Frame implements ActionListener, WindowListener
     {
     	new Sound().setVisible(true);
     }
-    
+   // Upon calling play, you send in the notes as an Int, and the duration of the beat as a double
+
     public void score()
     {
         
@@ -32,30 +33,6 @@ public class Sound extends Frame implements ActionListener, WindowListener
     }
 
     
-
-
-    
-    static int sharp(int x)
-    {
-        return x+1;
-    }
-    static int flat(int x)
-    {
-        return x-1;
-    }
-    static int high(int x)
-    {
-        return x+12;
-    }
-    static int low(int x)
-    {
-        return x-12;
-    }
-
-
-    
-
-
     TextField filenameText, tpqText, slope, yAxis;
     Button    genButton;
     Label     messageLabel;
@@ -130,6 +107,7 @@ public class Sound extends Frame implements ActionListener, WindowListener
                 DataOutputStream data;
                 data = new DataOutputStream(new FileOutputStream(filenameText.getText()));
                 
+//After the score is written, the notes are written to the MIDI file and then created
             	score();
                 data.writeBytes("MThd");
                 data.writeInt(6);
@@ -154,7 +132,7 @@ public class Sound extends Frame implements ActionListener, WindowListener
             }
         }
     }
-
+//The play function takes the note and duration and formats the MIDI file information
     void play(int pitch, double duration)
     {
         int durat;
